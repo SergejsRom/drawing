@@ -115,7 +115,7 @@ export default {
     this.ctx = this.canvas.getContext('2d', { willReadFrequently: true })
     this.canvas.width = this.$refs.canvas_width.offsetWidth
     this.canvas.height = window.innerHeight * 0.7
-    this.ctx.fillStyle = 'lightblue'
+    this.ctx.fillStyle = 'white'
     this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height)
   },
   methods: {
@@ -234,6 +234,8 @@ export default {
     },
     clearCanvas() {
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+      this.ctx.fillStyle = 'white'
+      this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height)
     }
   }
 }
