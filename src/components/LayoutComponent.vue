@@ -159,12 +159,13 @@ export default {
     },
 
     drawBrush(event) {
-      this.ctx.strokeStyle = this.color
-      this.ctx.lineWidth = this.elementWidth
       this.ctx.beginPath()
-      this.ctx.lineCap = 'round'
       this.ctx.moveTo(event.offsetX, event.offsetY)
       this.ctx.lineTo(event.offsetX, event.offsetY)
+      this.ctx.lineWidth = this.elementWidth
+      this.ctx.strokeStyle = this.color
+      this.ctx.lineCap = 'round'
+      
       this.ctx.stroke()
     },
 
@@ -240,20 +241,3 @@ export default {
   }
 }
 </script>
-
-<!-- <style>
-.drawing-app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.drawing-tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-canvas {
-  border: 1px solid black;
-}
-</style> -->
